@@ -154,9 +154,9 @@ more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
 Kubernetes will __always__ try and steer the cluster to  its desired state
 
-> Me: "I want 5 healthy instances of nginx to always be running"
-> Kubernetes: "Ok, I will ensure there are always 5 instances up and running"
-> Kubernetes: "Oh, one nginx has died. I'm going to try to spin up a new one"
+- Me: "I want 5 healthy instances of nginx to always be running"
+- Kubernetes: "Ok, I will ensure there are always 5 instances up and running"
+- Kubernetes: "Oh, one nginx has died. I'm going to try to spin up a new one"
 
 ---
 
