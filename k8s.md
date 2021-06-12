@@ -132,7 +132,7 @@ class: middle, center
 
 Greek for "pilot" or "Helmsman of a ship"
 
-.center[![:img kubernetes logo, 50%](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
+.center[![:img kubernetes logo, 30%](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
 
 ---
 
