@@ -80,7 +80,7 @@ class: middle, center
 
 class: middle, center
 
-# Container orchestration
+# Container Orchestration
 
 ---
 
@@ -245,3 +245,84 @@ more info: https://etcd.io/
 	* containerd
 	* cri-o
 	* ...
+
+---
+
+class: middle, center
+
+# Kubernetes Concepts
+
+---
+
+# Pods
+
+- Smallest deployable units that you can create and manage in Kubernetes
+- A group of one or more containers with shared storage and network resources
+
+more info: https://kubernetes.io/docs/concepts/workloads/pods/
+
+---
+
+# Pods
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello
+spec:
+  containers:
+    - name: hello
+      image: shinomineko/hello-service
+```
+
+---
+
+# Pods
+
+Each pod is meant to run a single instance of a given application. If you want to scale your
+application horizontally, you should use multiple pods.
+
+---
+
+# ReplicaSets
+
+- Maintain a stable set of replica Pods running at any give time
+
+---
+
+# ReplicaSets
+
+```yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: hello-replicaset
+  labels:
+    app: hello
+spec:
+  template:
+    metadata:
+      name: hello-pod
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: shinomineko/hello-service
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello
+```
+
+---
+
+# Labels and Selectors
+
+- Key-value pairs attached to objects, such as pods
+- Can be used to organize and to select subsets of objects
+	* "environment": "dev", "environment": : "production"
+	* "tier": "frontend", "tier": "backend"
+
+---
