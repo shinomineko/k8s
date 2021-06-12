@@ -132,7 +132,7 @@ class: middle, center
 
 Greek for "pilot" or "Helmsman of a ship"
 
-.center[![kubernetes logo](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
+.center[![:img kubernetes logo, 50%](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
 
 ---
 
@@ -159,4 +159,4 @@ Greek for "pilot" or "Helmsman of a ship"
 
 # Kubernetes Control Plane components
 
-.center[![control plane](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)]
+.center[![:img control plane, 50%](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)]

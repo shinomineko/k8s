@@ -20,10 +20,6 @@
 			font-weight: normal;
 		}
 
-		img {
-			max-width: 100%;
-		}
-
 		.remark-code,
 		.remark-inline-code {
 			font-family: 'Ubuntu Mono';
@@ -36,6 +32,10 @@
 	<script src="https://remarkjs.com/downloads/remark-latest.min.js">
 	</script>
 	<script>
+		remark.macros.img = function (altText, width) {
+			var url = this;
+			return '<img title="' + altText + '" alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
+		};
 		var slideshow = remark.create({ sourceUrl: 'k8s.md' });
 	</script>
 </body>
