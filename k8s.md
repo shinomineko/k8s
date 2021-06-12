@@ -145,15 +145,12 @@ more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
 # Kubernetes architecture
 
-### Node
+### When you deploy Kubernetes, you get a cluster
 
-- A machine that run containerized applications
-	* Worker nodes
-	* Control plane
+- Worker node(s) host the Pods
+- Control plane manages the worker nodes and the Pods in the cluster
 
-### Cluster
-
-- A set of nodes
+more info: https://kubernetes.io/docs/concepts/overview/components/
 
 ---
 
@@ -164,8 +161,6 @@ more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 - kube-controller-manager
 - kube-scheduler
 - cloud-controller-manager (optional)
-
-more info: https://kubernetes.io/docs/concepts/overview/components/
 
 ---
 
@@ -186,4 +181,71 @@ more info: https://kubernetes.io/docs/concepts/overview/components/
 - Provide a strong, consistent, and highly available key-value store for persisting cluster state
 - Stores objects and config information
 
+more info: https://etcd.io/
+
 ---
+
+# Kubernetes Control Plane components
+
+### kube-controller-manager
+
+- Monitors the cluster state and steers the cluster towards the desired state
+- Some types of these controllers are:
+	* Node controller: Responsible for noticing and responding when nodes go down
+	* Replication controller: Responsible for maintaining the correct number of pods
+
+---
+
+# Kubernetes Control Plane components
+
+### kube-scheduler
+
+- Watches newly created pods with no node assigned and selects a node for them to run on
+- With many factors taken into account for scheduling decisions
+
+---
+
+# Kubernetes Control Plane components
+
+### cloud-controller-manager
+
+- Lets you link your cluster into your cloud provider's API
+
+---
+
+# Node components
+
+- kubelet
+- kube-proxy
+- Container runtime
+
+---
+
+# Node components
+
+### kubelet
+
+- Runs on each node in the cluster
+- Makes sure that containers are running in a Pod
+- Takes PodSpecs, ensures that the containers in those PodSpecs are running and healthy
+
+---
+
+# Node components
+
+### kube-proxy
+
+- Maintains the network rules on each node
+- These network rules allow network communication to your Pods from inside or outside of your cluster
+
+---
+
+# Node components
+
+### Container runtime
+
+- Software that is resposible for running containers
+	* Docker
+	* containerd
+	* cri-o
+	* ...
