@@ -130,9 +130,9 @@ class: middle, center
 
 # What does "Kubernetes" mean?
 
-Greek for "pilot" or "Helmsman of a ship"
+#### Greek for "pilot" or "Helmsman of a ship"
 
-.center[![:img kubernetes logo, 30%](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
+.center[![:img kubernetes logo, 50%](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
 
 ---
 
@@ -145,13 +145,13 @@ Greek for "pilot" or "Helmsman of a ship"
 
 # Kubernetes architecture
 
-## Node
+### Node
 
 - A machine that run containerized applications
 	* Worker nodes
 	* Control plane
 
-## Cluster
+### Cluster
 
 - A set of nodes
 
@@ -160,3 +160,34 @@ Greek for "pilot" or "Helmsman of a ship"
 # Kubernetes Control Plane components
 
 .center[![:img control plane, 50%](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)]
+
+---
+
+# Kubernetes Control Plane components
+
+- kube-apiserver
+- etcd
+- kube-controller-manager
+- kube-scheduler
+- cloud-controller-manager (optional)
+
+---
+
+# Kubernetes Control Plane components
+
+### kube-apiserver
+
+- Provide interface into the control plane
+- All clients and other applications interact with kubernetes through the API server
+
+---
+
+# Kubernetes Control Plane components
+
+### etcd
+
+- Acts as the cluster datastore
+- Provide a strong, consistent, and highly available key-value store for persisting cluster state
+- Stores objects and config information
+
+.center[![etcd](https://pierrezemb.fr/posts/notes-about-etcd/images/etcd.png)]
