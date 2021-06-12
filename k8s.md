@@ -20,10 +20,6 @@ class: middle, center
 
 # To understand Kubernetes, we must first understand 2 things
 
---
-
-class: middle
-
 - Containers
 - Orchestration
 
