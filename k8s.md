@@ -29,9 +29,7 @@ class: middle, center
 
 # What are containers?
 
----
-
-# Containers
+--
 
 - Made up of Linux primitives
 	* Cgroups
@@ -39,21 +37,18 @@ class: middle, center
 	* Blah blah blah
 
 ???
+Namespaces - control what a process can use.
+Cgroups - control what a process can use.
 
-Namespaces - control what a process can use
-Cgroups - control what a process can use
-
----
-
-# Containers
+--
 
 - Isolated environments
 - As in, they can have their own processes, networks, mounts. Just like VM
 - Except they can share the same kernel
 
----
+.center[![containers](./img/containers.png)]
 
-# Containers
+--
 
 Linux containers have been around long before Docker
 
@@ -67,7 +62,9 @@ Linux containers have been around long before Docker
 
 class: middle, center
 
-# What do you need containers?
+# Why do you need containers?
+
+--
 
 - Compatibilities, dependencies
 - Quick, repetable
