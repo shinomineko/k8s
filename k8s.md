@@ -78,7 +78,7 @@ class: middle, center
 - Quick, repetable
 - Consistency
 
-.center[![containers](./img/containers.png)]
+.center[![containers](https://www.poweradmin.com/blog/wp-content/uploads/2019/02/linux-operating-systems.png)]
 
 ---
 
@@ -98,7 +98,7 @@ class: middle, center
 
 class: middle, center
 
-You need an underlying platform with resources and capabilities
+### You need an underlying platform with resources and capabilities
 
 ---
 
@@ -132,7 +132,7 @@ class: middle, center
 
 Greek for "pilot" or "Helmsman of a ship"
 
-.center[![kubernetes logo](./img/kubernetes-horizontal-color.png)]
+.center[![kubernetes logo](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
 
 ---
 
@@ -159,4 +159,4 @@ Greek for "pilot" or "Helmsman of a ship"
 
 # Kubernetes Control Plane components
 
-.center[![control plane](.img/components-of-kubernetes.svg)]
+.center[![control plane](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)]
