@@ -17,11 +17,9 @@ class: middle, center
 - Services
 
 ---
+class:  middle, center
 
-# To understand Kubernetes, we must first understand 2 things
-
-- Containers
-- Orchestration
+### To understand Kubernetes, we must first understand 2 things: Containers and Orchestration
 
 ---
 
