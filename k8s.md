@@ -435,7 +435,11 @@ class: middle, center
 - An abstract way to expose an application running on Pods as a network service
 - Durable resource, unlike Pods
 	* static cluster-unique IP
-	* static namespaces DNS name: `<service-name>.<namespace>.svc.cluster.local`
+	* static namespaces DNS name
+
+.center[`<service-name>.<namespace>.svc.cluster.local`]
+
+more info: https://kubernetes.io/docs/concepts/services-networking/service/
 
 ---
 
@@ -449,7 +453,7 @@ There many service types:
 
 ---
 
-# Service
+# Services
 
 ## ClusterIP
 
