@@ -20,6 +20,8 @@ class: middle, center
 
 # To understand Kubernetes, we must first understand 2 things
 
+class: middle
+
 - Containers
 - Orchestration
 
@@ -50,8 +52,6 @@ Cgroups - control what a process can use.
 - As in, they can have their own processes, networks, mounts. Just like VM
 - Except they can share the same kernel
 
-.center[![containers](./img/containers.png)]
-
 ---
 
 # Containers
@@ -78,4 +78,85 @@ class: middle, center
 - Quick, repetable
 - Consistency
 
+.center[![containers](./img/containers.png)]
+
 ---
+
+class: middle, center
+
+# Container orchestration
+
+---
+
+# Container orchestration
+
+- Your application relies on other containers
+- Number of users increases/decreses, how do you scale up or down?
+- Blah blah blah
+
+---
+
+class: middle, center
+
+You need an underlying platform with resources and capabilities
+
+---
+
+# Containers orchestration technologies
+
+- Docker Swarm
+- Apache Mesos
+- Kubernetes
+- ...
+
+---
+
+# Advantages of containers orchestration
+
+- Your app is now highly available, kinda
+- User traffic is load-balanced across containers
+- Scale containers up or down seamlessly
+- Self-healing
+- Upgrade or rollback applications
+- Even scale the orchestration nodes themselves
+
+---
+
+class: middle, center
+
+# Kubernetes
+
+---
+
+# What does "Kubernetes" mean?
+
+Greek for "pilot" or "Helmsman of a ship"
+
+.center[![kubernetes logo](./img/kubernetes-horizontal-color.png)]
+
+---
+
+# What is Kubernetes?
+
+- A production-grade container orchestration system made by Google, based on Borg, systems that run inside of Google
+- Google spawns billions of containers per week with these systems
+
+---
+
+# Kubernetes architecture
+
+## Node
+
+- A machine that run containerized applications
+	* Worker nodes
+	* Control plane
+
+## Cluster
+
+- A set of nodes
+
+---
+
+# Kubernetes Control Plane components
+
+.center[![control plane](.img/components-of-kubernetes.svg)]
