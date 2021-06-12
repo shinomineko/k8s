@@ -126,18 +126,46 @@ class: middle, center
 
 # What does "Kubernetes" mean?
 
-#### Greek for "pilot" or "Helmsman of a ship"
+#### Originates from Greek for "pilot" or "Helmsman of a ship"
 
-https://www.google.com/search?q=kubernetes+pronounce
+How to pronounce: https://www.google.com/search?q=kubernetes+pronounce
 
 ---
 
 # What is Kubernetes?
 
-- A production-grade container orchestration system made by Google, based on Borg, systems that run inside of Google
+- Also known as 'K8s'
+- A production-grade open-source container orchestration system made by Google, based on Borg, systems that run inside of Google
 - Google spawns billions of containers per week with these systems
 
 more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
+
+---
+
+# What is Kubernetes?
+
+- All services within Kubernetes are natively load-balanced
+- Can scale up and down dynamically
+- Enables self-healing and seamless upgrading or rollback of applications
+
+---
+
+# Self-Healing
+
+Kubernetes will __always__ try and steer the cluster to  its desired state
+
+Me: "I want 5 healthy instances of nginx to always be running"
+Kubernetes: "Ok, I will ensure there are always 5 instances up and running"
+Kubernetes: "Oh, one nginx has died. I'm going to try to spin up a new one"
+
+---
+
+# Kubernetes project
+
+- Over 78,000+ stars on GitHub
+- Over 3,000+ contributors to Kubernetes core
+
+more info: https://github.com/kubernetes
 
 ---
 
