@@ -398,7 +398,7 @@ more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/nam
 Kubernetes starts with 4 initial namespaces:
 - `default`: for objects with no other namespace
 - `kube-system`: for objects created by Kubernetes system
-- `kube-public`: readable ny all users, mostly reserved for cluster usage
+- `kube-public`: readable by all users, mostly reserved for cluster usage
 - `kube-node-lease`: for the lease objects associated with each node which improves the performance
 	of the node heartbeats
 
