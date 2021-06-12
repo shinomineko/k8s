@@ -128,6 +128,8 @@ class: middle, center
 
 #### Greek for "pilot" or "Helmsman of a ship"
 
+https://www.google.com/search?q=kubernetes+pronounce
+
 ---
 
 # What is Kubernetes?
@@ -322,7 +324,204 @@ spec:
 
 - Key-value pairs attached to objects, such as pods
 - Can be used to organize and to select subsets of objects
-	* "environment": "dev", "environment": : "production"
+	* "environment": "dev", "environment": "production"
 	* "tier": "frontend", "tier": "backend"
 
+more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+
 ---
+
+# Deployments
+
+- a higher-level concept that manages ReplicaSets
+- Provide a lot of other useful features
+	* Rolling upgrade/rollback
+
+---
+
+class: middle, center
+
+### This actually means that you may never need to manipulate ReplicaSet directly: __use a Deployment instead__
+
+---
+
+# Deployments
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - image: shinomineko/hello-service
+        name: hello-service
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello
+```
+
+---
+
+# Namespaces
+
+Kubernetes supports multiple virtual clusters backed by the same physical cluster, called namespaces
+
+- Multiple teams
+- Multiple projects
+- Multiple environments
+
+more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+
+---
+
+# Namespaces
+
+Kubernetes starts with 4 initial namespaces:
+- `default`: for objects with no other namespace
+- `kube-system`: for objects created by Kubernetes system
+- `kube-public`: readable ny all users, mostly reserved for cluster usage
+- `kube-node-lease`: for the lease objects associated with each node which improves the performance
+	of the node heartbeats
+
+---
+
+class: middle, center
+
+# Networking in Kubernetes
+
+---
+
+# Kubernetes Networking 101
+
+- Each pod gets its own IP address
+- All containers within a pod can communicate with each other
+- All pods can communicate with all other pods
+- All nodes can communicate with all pods
+
+---
+
+Kubernetes pods are created and destroyed to match the state of your cluster all the time. If you
+use a deployment to run your app, it can create and destroy pods dynamically.
+
+--
+
+Each pod gets its own IP address, however in a deployment, the set of pods running now could be
+different from the set of pods a moment later.
+
+--
+
+If some set of pods (let's call them "backends") provides things to other pods (let's call them
+"frontend"), how do the frontends keep track of which IP to connect to?
+
+---
+
+class: middle, center
+
+# Services
+
+---
+
+# Services
+
+- An abstract way to expose an application running on Pods as a network service
+- Durable resource, unlike Pods
+	* static cluster-unique IP
+	* static namespaces DNS name: `<service-name>.<namespace>.svc.cluster.local`
+
+---
+
+# Services
+
+There many service types:
+
+- ClusterIP (default)
+- NodePort
+- LoadBalancer
+
+---
+
+# Service
+
+## ClusterIP
+
+- Exposes a service on a cluster internal virtual IP
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: hello
+  name: hello
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: hello
+  type: ClusterIP
+```
+
+---
+
+# Services
+
+## NodePort
+
+- Extends the ClusterIP service
+- Exposes a port on every node's IP
+- Port can be either statically defined, or dynamically taken from a range between 30000-32767
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: hello
+  name: hello
+spec:
+  ports:
+  - nodePort: 31877
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: hello
+  type: NodePort
+```
+
+---
+
+# Services
+
+## LoadBalancer
+
+- Extends the NodePort services
+- Works with an external system to map a cluster external IP to the service
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: hello
+  name: hello
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: hello
+  type: LoadBalancer
+```
