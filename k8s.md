@@ -52,6 +52,8 @@ Cgroups - control what a process can use.
 - As in, they can have their own processes, networks, mounts. Just like VM
 - Except they can share the same kernel
 
+more info: https://opensource.com/resources/what-are-linux-containers
+
 ---
 
 # Containers
@@ -77,8 +79,6 @@ class: middle, center
 - Compatibilities, dependencies
 - Quick, repetable
 - Consistency
-
-.center[![containers](https://www.poweradmin.com/blog/wp-content/uploads/2019/02/linux-operating-systems.png)]
 
 ---
 
@@ -132,14 +132,14 @@ class: middle, center
 
 #### Greek for "pilot" or "Helmsman of a ship"
 
-.center[![:img kubernetes logo, 50%](https://kubernetes.io/images/kubernetes-horizontal-color.png)]
-
 ---
 
 # What is Kubernetes?
 
 - A production-grade container orchestration system made by Google, based on Borg, systems that run inside of Google
 - Google spawns billions of containers per week with these systems
+
+more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
 ---
 
@@ -159,17 +159,13 @@ class: middle, center
 
 # Kubernetes Control Plane components
 
-.center[![:img control plane, 50%](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)]
-
----
-
-# Kubernetes Control Plane components
-
 - kube-apiserver
 - etcd
 - kube-controller-manager
 - kube-scheduler
 - cloud-controller-manager (optional)
+
+more info: https://kubernetes.io/docs/concepts/overview/components/
 
 ---
 
@@ -190,4 +186,4 @@ class: middle, center
 - Provide a strong, consistent, and highly available key-value store for persisting cluster state
 - Stores objects and config information
 
-.center[![etcd](https://pierrezemb.fr/posts/notes-about-etcd/images/etcd.png)]
+---
