@@ -256,6 +256,16 @@ class: middle, center
 
 ---
 
+# Something to keep you company
+
+```console
+$ git clone https://github.com/shinomineko/learn-k8s.git
+```
+
+And don't forget to read the README!
+
+---
+
 # Pods
 
 - Smallest deployable units that you can create and manage in Kubernetes
@@ -529,3 +539,16 @@ spec:
     app: hello
   type: LoadBalancer
 ```
+
+---
+
+class: middle, center
+
+### Thank you and good luck on your Kubernetes journey!
+
+---
+
+class: middle, center
+
+btw this slide is open-source, you can find it [here](https://github.com/shinomineko/k8s). All
+comments are appreciated.
