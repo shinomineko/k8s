@@ -578,5 +578,6 @@ class: middle, center
 
 class: middle, center
 
-Oh btw this slide is open-source, you can find it [here](https://github.com/shinomineko/k8s). All
-comments are appreciated.
+Oh btw this slide is open-source, you can find it at [github.com/shinomineko/k8s](https://github.com/shinomineko/k8s)
+
+All comments are appreciated
