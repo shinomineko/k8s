@@ -9,11 +9,10 @@ class: middle, center
 - Kubernetes overview
 	* Containers overview
 	* Kubernetes architecture
-- Kubernetes concepts (and a lot of YAML)
+- Kubernetes concepts
 	* Pods
 	* ReplicaSets
 	* Deployments
-- Networking in Kubernetes
 - Services
 
 ---
