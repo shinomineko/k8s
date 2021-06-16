@@ -34,11 +34,39 @@ class: middle, center
 - Made up of Linux primitives
 	* Cgroups
 	* Namespaces
+	* Linux Security Modules
 	* Blah blah blah
 
-???
-Namespaces - control what a process can use.
-Cgroups - control what a process can use.
+---
+
+# Containers
+
+### Namespaces
+
+Control what a process can see
+
+- PID
+- Mount
+- Network
+- IPC
+- User
+- Cgroup
+- ...
+
+---
+
+# Containers
+
+### Cgroups
+
+Control what a process can use
+
+- Memory
+- CPU
+- Blkio
+- Devices
+- Cpuset
+- ...
 
 ---
 
@@ -48,7 +76,9 @@ Cgroups - control what a process can use.
 - As in, they can have their own processes, networks, mounts. Just like VM
 - Except they can share the same kernel
 
-more info: https://opensource.com/resources/what-are-linux-containers
+<img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png" alt="containers vs vm" style="width: 400px;">
+
+.footnote[more info: https://opensource.com/resources/what-are-linux-containers]
 
 ---
 
@@ -128,7 +158,10 @@ class: middle, center
 
 #### Originates from Greek for "pilot" or "Helmsman of a ship"
 
-How to pronounce: https://www.google.com/search?q=kubernetes+pronounce
+<img src="https://kubernetes.io/images/kubernetes-horizontal-color.png" alt="kubernetes"
+style="width: 800px;">
+
+.footnote[How to pronounce: https://www.google.com/search?q=kubernetes+pronounce]
 
 ---
 
@@ -138,7 +171,7 @@ How to pronounce: https://www.google.com/search?q=kubernetes+pronounce
 - A production-grade open-source container orchestration system made by Google, based on Borg, systems that run inside of Google
 - Google spawns billions of containers per week with these systems
 
-more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
+.footnote[more info: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/]
 
 ---
 
@@ -165,7 +198,7 @@ Kubernetes will __always__ try and steer the cluster to  its desired state
 - Over 78,000+ stars on GitHub
 - Over 3,000+ contributors to Kubernetes core
 
-more info: https://github.com/kubernetes
+.footnote[more info: https://github.com/kubernetes]
 
 ---
 
@@ -176,7 +209,7 @@ more info: https://github.com/kubernetes
 - Worker node(s) host the Pods
 - Control plane manages the worker nodes and the Pods in the cluster
 
-more info: https://kubernetes.io/docs/concepts/overview/components/
+.footnote[more info: https://kubernetes.io/docs/concepts/overview/components/]
 
 ---
 
@@ -207,7 +240,7 @@ more info: https://kubernetes.io/docs/concepts/overview/components/
 - Provide a strong, consistent, and highly available key-value store for persisting cluster state
 - Stores objects and config information
 
-more info: https://etcd.io/
+.footnote[more info: https://etcd.io/]
 
 ---
 
@@ -299,7 +332,7 @@ And don't forget to read the README!
 - Smallest deployable units that you can create and manage in Kubernetes
 - A group of one or more containers with shared storage and network resources
 
-more info: https://kubernetes.io/docs/concepts/workloads/pods/
+.footnote[more info: https://kubernetes.io/docs/concepts/workloads/pods/]
 
 ---
 
@@ -365,7 +398,7 @@ spec:
 	* `"environment": "dev"`, `"environment": "production"`
 	* `"tier": "frontend"`, `"tier": "backend"`
 
-more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+.footnote[more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/]
 
 ---
 
@@ -417,13 +450,14 @@ Kubernetes supports multiple virtual clusters backed by the same physical cluste
 - Multiple projects
 - Multiple environments
 
-more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+.footnote[more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/]
 
 ---
 
 # Namespaces
 
 Kubernetes starts with 4 initial namespaces:
+
 - `default`: for objects with no other namespace
 - `kube-system`: for objects created by Kubernetes system
 - `kube-public`: readable by all users, mostly reserved for cluster usage
@@ -477,7 +511,7 @@ class: middle, center
 
 .center[`<service-name>.<namespace>.svc.cluster.local`]
 
-more info: https://kubernetes.io/docs/concepts/services-networking/service/
+.footnote[more info: https://kubernetes.io/docs/concepts/services-networking/service/]
 
 ---
 
@@ -571,6 +605,8 @@ spec:
 ---
 
 class: middle, center
+
+### That's all (for now)
 
 ### Thank you and good luck on your Kubernetes journey!
 
