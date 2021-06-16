@@ -362,8 +362,8 @@ spec:
 
 - Key-value pairs attached to objects, such as pods
 - Can be used to organize and to select subsets of objects
-	* "environment": "dev", "environment": "production"
-	* "tier": "frontend", "tier": "backend"
+	* `"environment": "dev"`, `"environment": "production"`
+	* `"tier": "frontend"`, `"tier": "backend"`
 
 more info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 
@@ -458,7 +458,7 @@ different from the set of pods a moment later.
 --
 
 If some set of pods (let's call them "backends") provides things to other pods (let's call them
-"frontend"), how do the frontends keep track of which IP to connect to?
+"frontends"), how do the frontends keep track of which IP to connect to?
 
 ---
 
