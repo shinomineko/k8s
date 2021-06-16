@@ -16,6 +16,11 @@ class: middle, center
 - Services
 
 ---
+
+.center[<img src="./img/k8s-iceburg.jpg" style="height: 600px;">]
+
+---
+
 class:  middle, center
 
 ### To understand Kubernetes, we must first understand 2 things: Containers and Orchestration
