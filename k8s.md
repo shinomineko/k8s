@@ -311,6 +311,10 @@ Kubernetes will __always__ try and steer the cluster to  its desired state
 
 ---
 
+<img src="https://miro.medium.com/max/2400/1*QWJijlj7kwd0hIYk8Wsnow.png" style="width: 100%">
+
+---
+
 class: middle, center
 
 # Kubernetes Concepts
