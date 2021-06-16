@@ -76,7 +76,7 @@ Control what a process can use
 - As in, they can have their own processes, networks, mounts. Just like VM
 - Except they can share the same kernel
 
-<img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png" alt="containers vs vm" style="width: 400px;">
+<img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png" alt="containers vs vm" style="width: 500px;">
 
 .footnote[more info: https://opensource.com/resources/what-are-linux-containers]
 
@@ -159,7 +159,7 @@ class: middle, center
 #### Originates from Greek for "pilot" or "Helmsman of a ship"
 
 <img src="https://kubernetes.io/images/kubernetes-horizontal-color.png" alt="kubernetes"
-style="width: 800px;">
+style="width: 500px;">
 
 .footnote[How to pronounce: https://www.google.com/search?q=kubernetes+pronounce]
 
