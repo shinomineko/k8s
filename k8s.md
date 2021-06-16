@@ -534,7 +534,7 @@ There many service types:
 
 # Services
 
-## ClusterIP
+### ClusterIP
 
 - Exposes a service on a cluster internal virtual IP
 
@@ -559,7 +559,7 @@ spec:
 
 # Services
 
-## NodePort
+### NodePort
 
 - Extends the ClusterIP service
 - Exposes a port on every node's IP
@@ -587,7 +587,7 @@ spec:
 
 # Services
 
-## LoadBalancer
+### LoadBalancer
 
 - Extends the NodePort services
 - Works with an external system to map a cluster external IP to the service
