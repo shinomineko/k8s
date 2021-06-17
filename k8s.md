@@ -107,7 +107,7 @@ class: middle, center
 # Why do you need containers?
 
 - Compatibilities, dependencies
-- Quick, repetable
+- Quick, repeatable
 - Consistency
 
 ---
