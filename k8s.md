@@ -17,7 +17,7 @@ class: middle, center
 
 ---
 
-.center[<img src="./img/k8s-iceburg.jpg" style="height: 600px;">]
+.center[<img src="./img/k8s-iceberg.jpg" style="height: 600px;">]
 
 ---
 
