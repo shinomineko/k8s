@@ -80,7 +80,7 @@ Control what a process can use
 - As in, they can have their own processes, networks, mounts. Just like VM
 - Except they share the same kernel
 
-.center[<img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png" alt="containers vs vm" style="width: 500px;">]
+.center[<img src="https://www.sdxcentral.com/wp-content/uploads/2019/05/ContainersvsVMs_Image.jpg" alt="containers vs vm" style="width: 500px;">]
 
 .footnote[more info: https://opensource.com/resources/what-are-linux-containers]
 
